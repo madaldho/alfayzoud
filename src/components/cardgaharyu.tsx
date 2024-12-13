@@ -70,6 +70,7 @@ export default function GaharuShowcase() {
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.5 }}
+                  loading="lazy"
                 />
               </AnimatePresence>
               <div className="absolute top-4 left-4 bg-[#8c6d5b] text-white px-2 py-1 rounded-full text-sm font-semibold">

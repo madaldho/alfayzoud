@@ -30,7 +30,7 @@ const GaharuCard: React.FC<GaharuCardProps> = ({
       onMouseLeave={() => setIsHovered(false)}
     >
       <div className="relative">
-        <img src={image} alt={name} className="w-full h-48 object-cover" />
+        <img loading="lazy" src={image} alt={name} className="w-full h-48 object-cover" />
 
         <span
           className={`absolute top-2 left-2 px-2 py-1 text-xs font-bold rounded ${

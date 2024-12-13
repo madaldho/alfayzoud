@@ -30,11 +30,7 @@ const GaharuCard: React.FC<GaharuCardProps> = ({
       onMouseLeave={() => setIsHovered(false)}
     >
       <div className="relative">
-        <img
-          src={image}
-          alt={name}
-          className="w-full h-48 object-cover"
-        />
+        <img src={image} alt={name} className="w-full h-48 object-cover" />
 
         <span
           className={`absolute top-2 left-2 px-2 py-1 text-xs font-bold rounded ${
@@ -51,10 +47,13 @@ const GaharuCard: React.FC<GaharuCardProps> = ({
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center bg-amber-600 text-white px-4 py-2 rounded-full hover:bg-amber-700 transition duration-300"
-            > {/* WhatsApp Icon */}
-            <Icon icon="mdi:whatsapp" className="w-6 h-6" />
-            {/* Text */}
-            <span>  Sifto f WhatsApp</span></a>
+            >
+              {" "}
+              {/* WhatsApp Icon */}
+              <Icon icon="mdi:whatsapp" className="w-6 h-6" />
+              {/* Text */}
+              <span> Sifto f WhatsApp</span>
+            </a>
           </div>
         )}
       </div>
@@ -62,18 +61,18 @@ const GaharuCard: React.FC<GaharuCardProps> = ({
         <h3 className="text-lg font-bold text-black mb-2">{name}</h3>
         <p className="text-gray-600 mb-4">{description}</p>
         <p className="text-amber-600 font-bold mb-4">{price}</p>
-        
+
         <a
-      href={whatsappLink}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="flex items-center justify-center bg-[#4a3728] text-white text-center md:px-4 font-bold py-2 rounded-3xl hover:bg-green-600 transition space-x-2"
-    >
-      {/* WhatsApp Icon */}
-      <Icon icon="mdi:whatsapp" className="w-6 h-6" />
-      {/* Text */}
-      <span>Sifto f WhatsApp</span>
-    </a>
+          href={whatsappLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center justify-center bg-[#4a3728] text-white text-center px-6 py-3 font-bold rounded-3xl hover:bg-green-600 transition space-x-3"
+        >
+          {/* WhatsApp Icon */}
+          <Icon icon="mdi:whatsapp" className="w-5 h-5 md:w-6 md:h-6" />
+          {/* Text */}
+          <span className="text-sm md:text-base">Sifto f WhatsApp</span>
+        </a>
       </div>
     </div>
   );

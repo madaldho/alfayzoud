@@ -48,7 +48,7 @@ export default function GaharuShowcase() {
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col">
       <main className="flex-grow flex flex-col justify-center items-center md:p-8 p-3">
-        <h2 className="text-3xl font-bold text-center mb-8 md:px-16">
+        <h2 className="text-3xl font-bold text-center mb-8 md:px-16 pt-16">
           <span className="text-amber-800 hover:text-amber-600 transition-colors duration-300">
             Nos Produits 
           </span>{" "}

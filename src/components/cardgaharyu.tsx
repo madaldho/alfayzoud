@@ -7,7 +7,7 @@ import { ChevronLeft, ChevronRight, ShoppingCart, Star } from 'lucide-react'
 const product = {
   id: 1,
   name: "عود العود \"أكواليريا مالاكنسيس\"، أصله من منطقة سومطرة",
-  description: "Huile d'agar pure et aromatique, originaire de Sumatra",
+  description: "Pure et aromatique, originaire de Sumatra",
   prices: [
     { amount: 5, price: 175 },
     { amount: 10, price: 330 },

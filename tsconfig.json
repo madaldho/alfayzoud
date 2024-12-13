@@ -1,0 +1,10 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    "allowJs": true, // Mengizinkan penggunaan JavaScript dalam proyek TypeScript
+    "checkJs": false, // Jangan periksa JavaScript
+    "strict": false, // Nonaktifkan strict mode TypeScript
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
+  }
+}

@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .animation-pause {
+    animation-play-state: paused;
+  }
+}
+
+body {
+  background-color: white;
+  color: black;
+}
+
+body.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+/* Gaya untuk gambar */
+.moving-image {
+  width: 200px;
+  height: auto;
+  /* Membuat animasi */
+  animation: moveUpDown 2s ease-in-out infinite;
+  /* Membuat transisi halus */
+}
+
+/* Animasi naik-turun */
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); /* Naik */
+  }
+  100% {
+    transform: translateY(0); /* Turun kembali */
+  }
+}

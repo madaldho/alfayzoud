@@ -1,0 +1,32 @@
+---
+// File: src/components/SmoothScroll.astro
+---
+
+<script>
+    function smoothScroll() {
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href')?.substring(1);
+          if (!targetId) return;
+  
+          const targetElement = document.getElementById(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 20, // 20px offset for better positioning
+              behavior: 'smooth'
+            });
+  
+            // Update URL without causing a page reload
+            history.pushState(null, '', `#${targetId}`);
+          }
+        });
+      });
+    }
+  
+    // Run on initial load
+    smoothScroll();
+  
+    // Run after Astro view transitions
+    document.addEventListener('astro:page-load', smoothScroll);
+  </script>

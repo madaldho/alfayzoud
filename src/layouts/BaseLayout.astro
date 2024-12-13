@@ -1,0 +1,112 @@
+---
+import { SEO } from "astro-seo";
+import "../styles/global.css";
+
+import Footer from "../components/Footer.astro";
+import { Schema } from "astro-seo-schema";
+import Wangambang from "../components/wangambang.astro";
+import SpeedInsights from "@vercel/speed-insights/astro";
+
+// Mengambil props titlemeta dan descriptionmeta dari halaman
+const {
+  titlemeta = "Al Fayzoud - Vente de Bois de Oud (Gahru) Authentique au Maroc",
+  descriptionmeta = "Découvrez Al Fayzoud, votre fournisseur de bois de Oud (Gahru) authentique et de haute qualité au Maroc. Parfait pour les parfums et l'encens, idéal pour les amateurs de luxe. Commandez maintenant pour une livraison rapide au Maroc.",
+  imagecover = "/favicon.png", // Set default image jika tidak ada gambar
+} = Astro.props;
+
+const siteURL = new URL("https://alfayzoud.web.id/"); // Ganti dengan URL situs Anda
+const imageURL = new URL(imagecover, siteURL); // Properti gambar OpenGraph menggunakan URL yang valid
+const twitterHandle = "@alfayzOud"; // Ganti dengan username Twitter Anda
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO optimization menggunakan astro-seo -->
+    <SEO
+      title={titlemeta}
+      description={descriptionmeta}
+      canonical={siteURL.href}
+      openGraph={{
+        basic: {
+          title: titlemeta,
+          type: "website",
+          image: imageURL.href, // Gunakan URL gambar yang telah diproses
+          url: siteURL.href,
+        },
+        image: {
+          url: imageURL.href, // URL gambar default atau custom
+          alt: "alfayzOud OpenGraph Image", // Alt text gambar
+          width: 1200, // Lebar gambar OG
+          height: 630, // Tinggi gambar OG
+        },
+      }}
+      twitter={{
+        card: "summary_large_image", // Menggunakan gambar besar untuk Twitter Card
+        creator: twitterHandle,
+        image: imageURL.href, // URL gambar default atau custom
+      }}
+      extend={{
+        // Menambahkan favicon
+        link: [{ rel: "icon", href: "/favicon.png", type: "image/png" }],
+        // Menambahkan meta tambahan
+        meta: [
+          { name: "author", content: "alfayzOud" },
+          {
+            name: "keywords",
+            content:
+              "Sewa Mobil Jakarta, Rental Mobil Jakarta, Sewa Mobil Mewah Jakarta, Rental Mobil Mewah Jakarta, Sewa Mobil Surabaya, Rental Mobil Surabaya, Sewa Mobil Mewah Surabaya, Rental Mobil Mewah Surabaya, Sewa Mobil Bandung, Rental Mobil Bandung, Sewa Mobil Mewah Bandung, Rental Mobil Mewah Bandung, Sewa Mobil Medan, Rental Mobil Medan, Sewa Mobil Mewah Medan, Rental Mobil Mewah Medan, Sewa Mobil Makassar, Rental Mobil Makassar, Sewa Mobil Mewah Makassar, Rental Mobil Mewah Makassar, Sewa Mobil Denpasar, Rental Mobil Denpasar, Sewa Mobil Mewah Denpasar, Rental Mobil Mewah Denpasar, Sewa Mobil Yogyakarta, Rental Mobil Yogyakarta, Sewa Mobil Mewah Yogyakarta, Rental Mobil Mewah Yogyakarta, Sewa Mobil Semarang, Rental Mobil Semarang, Sewa Mobil Mewah Semarang, Rental Mobil Mewah Semarang,Sewa Mobil Palembang, Rental Mobil Palembang, Sewa Mobil Mewah Palembang, Rental Mobil Mewah Palembang, Sewa Mobil Balikpapan, Rental Mobil Balikpapan, Sewa Mobil Mewah Balikpapan, Rental Mobil Mewah Balikpapan",
+          },
+          { name: "robots", content: "index, follow" }, // Memberikan izin mesin pencari untuk mengindeks halaman
+          { name: "twitter:site", content: twitterHandle },
+          { name: "twitter:image", content: new URL(imageURL, siteURL).href }, // Menggunakan URL objek yang valid untuk Twitter
+        ],
+      }}
+    />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!--Sitemap -->
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <Schema
+      item={{
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        name: "alfayzOud",
+        description:
+          "Kami Menawarkan Sewa Mobil Surabaya Murah. Rental Mobil Mercy,BMW,Camry Surabaya Rp 1.5Jt - Rp 15Jt & Sewa Mobil Innova,Zenix,Fortuner,Alphard Harga Rp 1jt – Rp 3Jt.",
+        url: "https://alfayzoud.web.id",
+        telephone: "+212716164271",
+        image: "https://alfayzoud.web.id/favicon.png",
+        priceRange: "IDR",
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "Griya Permata Gedangan Blok J2 No. 2",
+          postalCode: "61254",
+          addressLocality: "Sidoarjo",
+          addressRegion: "Jawa Timur",
+          addressCountry: "ID",
+        },
+        sameAs: [
+          "https://www.facebook.com/people/Artha-Raya/pfbid021yAsiu8YcSvvFDSJp4BMhNukrs7N7VEyLmPtFTMLCzrLH3VkgshhFiG9yoTszSKul/?mibextid=ZbWKwL",
+          "https://www.instagram.com/artharaya.trans?igshid=NzZhOTFlYzFmZQ%3D%3D",
+        ],
+      }}
+    />
+  </head>
+
+  <body>
+    <!-- Slot konten utama -->
+    <main class="mx-auto scroll-smooth">
+      <slot />
+    </main>
+    <Footer />
+    <SpeedInsights />
+  </body>
+</html>

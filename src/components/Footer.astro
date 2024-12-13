@@ -1,0 +1,48 @@
+---
+import { Icon } from "astro-icon/components";
+import logo from "../assets/favicon.png";
+import { Image } from "astro:assets";
+---
+<footer class="bg-[#e0c9b1] text-black py-12">
+  <div class="container mx-auto px-6 md:px-20 ">
+    <!-- Logo -->
+    <div class="text-center mb-8">
+      <Image
+        src={logo}
+        alt="Al Fayzoud Logo"
+        class="mx-auto w-32"
+      />
+      <p class="text-sm mt-4">
+        Authentique Bois de Oud et Encens – Livraison rapide au Maroc.
+      </p>
+    </div>
+
+  
+
+    <!-- Social Media Links -->
+    <div class="flex justify-center space-x-6 mt-8">
+      <a
+        href="https://www.facebook.com/profile.php?id=61568214278176"
+        target="_blank"
+        class="text-black hover:text-amber-300"
+      >
+        <Icon name="mdi:facebook" class="h-6 w-6" />
+      </a>
+      <a
+        href="https://www.instagram.com/alfayz.oud/"
+        target="_blank"
+        class="text-black hover:text-amber-300"
+      >
+        <Icon name="mdi:instagram" class="h-6 w-6" />
+      </a>
+      
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="mt-8 text-center text-sm text-black-100">
+      <p>
+        &copy; {new Date().getFullYear()} Al Fayzoud. Tous droits réservés. 
+      </p>
+    </div>
+  </div>
+</footer>

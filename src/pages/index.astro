@@ -1,0 +1,25 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../components/hero.astro";
+import FAQ from "../components/FAQ";
+import GaharuSection from "../components/GaharuSection";
+import Terlaris from "../components/terlaris";
+import Artikel from "../components/artikel";
+import Cardgaharyu from "../components/cardgaharyu";
+import Yt from "../components/yt.astro";
+
+const titlemeta = "Al Fayzoud - Vente de Bois de Oud (Gahru) Authentique au Maroc";
+const descriptionmeta =
+  "Découvrez Al Fayzoud, votre fournisseur de bois de Oud (Gahru) authentique et de haute qualité au Maroc. Parfait pour les parfums et l'encens, idéal pour les amateurs de luxe. Commandez maintenant pour une livraison rapide au Maroc";
+---
+
+<BaseLayout titlemeta={titlemeta} descriptionmeta={descriptionmeta}>
+  <section>
+    <Hero/>
+    <Cardgaharyu client:load />
+    <GaharuSection client:load />
+    <Artikel client:load />
+    <Yt />
+    <FAQ client:load />
+  </section>
+</BaseLayout>

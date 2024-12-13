@@ -1,5 +1,9 @@
 ---
 import SmoothScroll from '../components/SmoothScroll.astro';
+import Image from 'astro/components/Image.astro';
+
+
+import herogaharu from "../assets/alami (1).webp"
 ---
 
 <section class=" w-full h-screen flex items-center justify-center bg-gradient-to-r from-[#e0c9b1] to-[#f6edd9] text-[#4a3728] py-20">
@@ -18,7 +22,7 @@ import SmoothScroll from '../components/SmoothScroll.astro';
       <div class="flex space-x-4">
         <a
           href="#gaharu"
-          class="px-6 py-3 bg-[#b68d4c] text-white font-semibold rounded-lg shadow-md hover:bg-[#9a7a3e] transition"
+          class="px-6 py-3 bg-[#75521B] text-white font-semibold rounded-lg shadow-md hover:bg-[#9a7a3e] transition"
         >
         Voir plus
         </a>
@@ -35,11 +39,15 @@ import SmoothScroll from '../components/SmoothScroll.astro';
 
     <!-- Gambar Kanan -->
     <div class="w-full md:w-1/2 flex justify-center items-center">
-      <img
-        src="/alami (1).webp"
-        alt="Gaharu Premium"
-        class="w-full max-w-sm md:max-w-2xl rounded-lg shadow-lg"
-      />
+      <Image
+      src={herogaharu}
+      alt="Gaharu Premium"
+      class="w-full max-w-sm md:max-w-2xl rounded-lg shadow-lg"
+      format="webp"
+      width={800} 
+      height={600}
+      loading="lazy"
+    />
     </div>
   </div>
 </section>

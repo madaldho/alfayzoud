@@ -60,7 +60,7 @@ const GaharuCard: React.FC<GaharuCardProps> = ({
       <div className="p-4">
         <h3 className="text-lg font-bold text-black mb-2">{name}</h3>
         <p className="text-gray-600 mb-4">{description}</p>
-        <p className="text-amber-600 font-bold mb-4">{price}</p>
+        <p className="text-amber-700 font-bold mb-4">{price}</p>
 
         <a
           href={whatsappLink}

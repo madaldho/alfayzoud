@@ -97,7 +97,7 @@ export default function GaharuShowcase() {
                 {product.images.map((_, index) => (
                   <button
                     key={index}
-                    className={`w-2 h-2 rounded-full ${
+                    className={`w-4 h-4 rounded-full ${
                       index === currentImageIndex ? 'bg-white' : 'bg-white/50'
                     }`}
                     onClick={() => setCurrentImageIndex(index)}

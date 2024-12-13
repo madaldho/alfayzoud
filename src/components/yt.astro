@@ -1,5 +1,5 @@
 ---
-
+import { YouTube } from 'astro-embed';
 ---
 
 <section
@@ -14,15 +14,17 @@
       Apprenez à connaître ses origines, son raffinement et ses multiples
       utilisations à travers cette démonstration captivante.
     </p>
-    <!-- Video Section -->
-    <div class="relative pb-[56.25%] h-0 overflow-hidden rounded-lg shadow-lg">
-      <iframe
-        src="https://www.youtube.com/embed/_1utBGvW5rM"
-        class="absolute top-0 left-0 w-full h-full rounded-lg"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
-    </div>
+    
+   <!-- Video Section -->
+<div class="flex justify-center items-center">
+  <div class="relative w-full max-w-3xl aspect-video rounded-lg overflow-hidden shadow-lg border-4 border-[#b68d4c] bg-[#fff7e7]">
+    <YouTube
+      id="_1utBGvW5rM"
+      title="youtube alfayzoud"
+    />
+  </div>
+</div>
+
 
     <!-- CTA Button -->
     <div class="mt-14">

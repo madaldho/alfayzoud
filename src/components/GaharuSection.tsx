@@ -5,7 +5,7 @@ const gaharu = [
   {
     id: 1,
     name: "العود القماري المحسن مروكي",
-    image: "/sintesisgaharyu (1).webp",
+    image: "/sintesisgaharyu1.webp",
     price: "10 DH/gramme",
     description: "Un oud de qualité supérieure avec un arôme puissant et durable.",
     isSold: false,
@@ -13,7 +13,7 @@ const gaharu = [
   {
     id: 2,
     name: "العود القماري المحسن كلمنتان",
-    image: "/sintesisgaharyu (2).webp",
+    image: "/sintesisgaharyu2.webp",
     price: "10 DH/gramme",
     description: "Récolté directement des forêts de Kalimantan, avec un arôme unique, parfait pour la thérapie.",
     isSold: false,
@@ -21,7 +21,7 @@ const gaharu = [
   {
     id: 3,
     name: "العود القماري المحسن كلمنتان",
-    image: "/sintesisgaharyu (3).webp",
+    image: "/sintesisgaharyu3.webp",
     price: "10 DH/gramme",
     description: "Un arôme doux et élégant, idéal pour la production de parfums.",
     isSold: false,
@@ -29,7 +29,7 @@ const gaharu = [
   {
     id: 4,
     name: "العود القماري المحسن كلمنتان",
-    image: "/sintesisgaharyu (4).webp",
+    image: "/sintesisgaharyu4.webp",
     price: "10 DH/gramme",
     description: "Un parfum exclusif utilisé pour la méditation et la spiritualité.",
     isSold: false,
@@ -37,7 +37,7 @@ const gaharu = [
   {
     id: 5,
     name: "العود القماري المحسن سومطرة",
-    image: "/sintesisgaharyu (5).webp",
+    image: "/sintesisgaharyu5.webp",
     price: "10 DH/gramme",
     description: "Un oud sélectionné avec un arôme unique provenant de Sumatra.",
     isSold: false,
@@ -45,7 +45,7 @@ const gaharu = [
   {
     id: 6,
     name: "العود القماري المحسن مروكي",
-    image: "/sintesisgaharyu (6).webp",
+    image: "/sintesisgaharyu6.webp",
     price: "10 DH/gramme",
     description: "Un oud premium de haute qualité originaire de Sumatra.",
     isSold: false,
@@ -53,7 +53,7 @@ const gaharu = [
   {
     id: 7,
     name: "العود القماري المحسن مروكي",
-    image: "/sintesisgaharyu (7).webp",
+    image: "/sintesisgaharyu7.webp",
     price: "10 DH/gramme",
     description: "Un oud authentique d'Aceh avec un arôme distinctif et exclusif.",
     isSold: false,

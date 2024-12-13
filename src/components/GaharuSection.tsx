@@ -8,7 +8,7 @@ const gaharu = [
     image: "/sintesisgaharyu (1).webp",
     price: "10 DH/gramme",
     description: "Un oud de qualité supérieure avec un arôme puissant et durable.",
-    isSold: true,
+    isSold: false,
   },
   {
     id: 2,
@@ -16,7 +16,7 @@ const gaharu = [
     image: "/sintesisgaharyu (2).webp",
     price: "10 DH/gramme",
     description: "Récolté directement des forêts de Kalimantan, avec un arôme unique, parfait pour la thérapie.",
-    isSold: true,
+    isSold: false,
   },
   {
     id: 3,

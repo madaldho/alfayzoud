@@ -17,12 +17,13 @@ const GaharuCard: React.FC<GaharuCardProps> = ({
   isSold,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
-
-  // WhatsApp link with product image
-  const whatsappLink = `https://wa.me/212716164271?text=Bonjour%20Alfayz%20Oud,%20je%20suis%20intéressé%20par%20le%20produit%20${encodeURIComponent(
-    name
-  )}%20(${encodeURIComponent(image)})%0A%0A`;
-
+ // Generate WhatsApp link dynamically with product name and image URL
+ const whatsappLink = () => {
+  const message = encodeURIComponent(
+    `Bonjour, je suis intéressé par le produit "${name}".\nVoici une image du produit : ${window.location.origin}${image}`
+  );
+  window.open(`https://wa.me/212716164271?text=${message}`, "_blank");
+};
   return (
     <div
       className="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 transform hover:scale-105"

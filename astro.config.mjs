@@ -4,7 +4,6 @@ import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 import partytown from "@astrojs/partytown";
 import robotsTxt from "astro-robots-txt";
-
 import icon from "astro-icon";
 
 //https://astro.build/config
@@ -19,12 +18,23 @@ export default defineConfig({
     },
   },
   site: "https://alfayzoud.web.id/", // Tambahkan URL situs di sini
-  integrations: [sitemap(), partytown({
-    config: {
-      forward: ["dataLayer.push", "fbq"],
+  integrations: [
+    sitemap(),
+    partytown({
+      config: {
+        forward: ["dataLayer.push", "fbq"],
+      },
+    }),
+    react({
+      experimentalReactChildren: true,
+    }),
+    robotsTxt(),
+    icon(),
+  ],
+  vite: {
+    optimizeDeps: {
+      include: ["fbevents"],
     },
-  }), react({
-    experimentalReactChildren: true,
-  }), robotsTxt(), icon()],
+  },
   // Konfigurasi lain
 });

@@ -21,7 +21,7 @@ export default defineConfig({
   site: "https://alfayzoud.web.id/", // Tambahkan URL situs di sini
   integrations: [sitemap(), partytown({
     config: {
-      forward: ["dataLayer.push"],
+      forward: ["dataLayer.push", "fbq"],
     },
   }), react({
     experimentalReactChildren: true,

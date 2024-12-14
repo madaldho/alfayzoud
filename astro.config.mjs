@@ -22,7 +22,7 @@ export default defineConfig({
     sitemap(),
     partytown({
       config: {
-        forward: ["dataLayer.push, fbq, windows.fbq"],
+        forward: ["dataLayer.push"],
       },
     }),
     react({

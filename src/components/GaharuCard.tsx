@@ -75,7 +75,7 @@ const GaharuCard: React.FC<GaharuCardProps> = ({
           className="flex items-center justify-center bg-[#4a3728] text-white text-center px-6 py-3 font-bold rounded-3xl hover:bg-green-600 transition space-x-3"
         >
           <Icon icon="mdi:whatsapp" className="w-5 h-5 md:w-6 md:h-6" />
-          <span className="text-sm md:text-base">Sifto f WhatsApp</span>
+          <span className="text-sm md:text-base">Acheter Maintenant</span>
         </a>
       </div>
     </div>
